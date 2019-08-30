@@ -1,32 +1,20 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-
+const express = require('express');
 const app = express();
-const PORT = 3000
+const bodyParser = require('body-parser');
+const port = process.env.PORT || 9000;
 
-app.use(bodyParser.json())
-app.use(express.urlencoded())
-app.use(express.static('public'))
-app.use( function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*")
-	res.header("Access-Control-Allow-Headers", "origin, xRequested-With, Content-Type, Accept")
-	next();
-})
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+app.use(express.static(__dirname + '/../public'));
+app.use(bodyParser.json());
 
-app.get("/", (req, res)=> {
-	res.sendFile(path.join(__dirname + '/public/index.html'))
-})
+app.listen(port, function() {
+  console.log(`YellProxy is listening on port ${port}`);
+});
 
-
-
-
-
-
-
-
-
-
-
-app.listen(PORT, ()=> {
-	console.log('tjn-proxy Server listening on port ',  PORT)
-})
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + 'public/index.html');
+});

@@ -1,0 +1,80 @@
+.map_and_photos a{
+  color: #0073bb !important;
+}
+
+.map_and_photos a:hover{
+  color: #0073bb !important;
+  text-decoration: underline !important
+}
+
+.thumbnail:hover {
+  position:relative;
+  width:250px;
+  height:auto;
+  display:block;
+  transition: 0.3s;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  padding: 50px;
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+body {
+  font-family: "Helvetica Nue", Helvetica, sans-serif;
+  color: #333;
+}
+
+h2 {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 1.28571em;
+  color: #d32323;
+}
+
+h2 b {
+  font-weight: normal;
+  color: #333;
+}
+
+h3 {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  font-weight: bold !important;
+  margin-bottom: 3px;
+  font-size: 16px !important;
+  line-height: 1.3125em !important;
+  color: #d32323 !important;
+}
+
+#sidebar a {
+  color: #0073bb !important;
+}
+
+#sidebar a:hover {
+  color: #0073bb !important;
+  text-decoration: underline !important;
+}
+
+#footer .NavMenuTitle {
+  color: #d32323;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+#footer .logo{
+  color: #d32323;   
+}
